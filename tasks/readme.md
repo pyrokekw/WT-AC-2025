@@ -10,3 +10,5 @@
 - [#6](./task_06/readme.md)
 - [#7](./task_07/readme.md)
 - [#8](./task_08/readme.md)
+
+Текст для проверки изоляции PR
