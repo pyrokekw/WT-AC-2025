@@ -408,9 +408,6 @@ body {
   color: var(--text-light);
 }
 
-/* Порядок селекторов исправлен для no-descending-specificity */
-/* Общие селекторы идут перед специфичными */
-
 button:focus,
 a:focus,
 .nav-link:focus {
