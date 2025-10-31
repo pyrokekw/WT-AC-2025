@@ -222,11 +222,6 @@ body {
   transition: var(--transition);
 }
 
-.place-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 25px rgb(0 0 0 / 15%);
-}
-
 .place-image {
   position: relative;
   aspect-ratio: 16 / 9;
@@ -375,10 +370,6 @@ body {
   transition: var(--transition);
 }
 
-.gallery-item:hover .gallery-caption {
-  opacity: 1;
-}
-
 .footer {
   background: var(--surface-color);
   border-top: 1px solid var(--border-color);
@@ -418,12 +409,13 @@ body {
 }
 
 /* Порядок селекторов исправлен для no-descending-specificity */
-.place-card:hover .place-image img {
-  transform: scale(1.05);
-}
+/* Общие селекторы идут перед специфичными */
 
-.gallery-item:hover img {
-  transform: scale(1.05);
+button:focus,
+a:focus,
+.nav-link:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
 }
 
 .footer-links a:hover,
@@ -432,11 +424,21 @@ body {
   text-decoration: underline;
 }
 
-button:focus,
-a:focus,
-.nav-link:focus {
-  outline: 2px solid var(--primary-color);
-  outline-offset: 2px;
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+.place-card:hover .place-image img {
+  transform: scale(1.05);
+}
+
+.gallery-item:hover .gallery-caption {
+  opacity: 1;
+}
+
+.place-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgb(0 0 0 / 15%);
 }
 
 @media screen and (width >= 601px) {
